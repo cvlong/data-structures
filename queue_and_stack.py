@@ -1,8 +1,14 @@
-"""QUEUE
+"""QUEUES
 
-- FIFO: first in first out. Enqueue items at the back; dequeue items at the front
-  enqueue(item), dequeue(), peek(), is_empty()
-- Better to build Queue class using a doubly linked list
+- First in, first out (FIFO)
+- Enqueue items at the back; dequeue items at the front
+- Runtime:
+    - Add-R: O(1)
+    - Pop-L: O(n)
+- Common methods: enqueue(item), dequeue(), peek(), is_empty()
+- More time efficient to build Queue class using a doubly linked list (but that
+trades runtime for space)
+
 """
 
 class Queue(object):
@@ -11,9 +17,11 @@ class Queue(object):
     def __init__(self):
         self._queue = []
 
+    # add items to the end of the list: O(1)
     def enqueue(self, item):
         self._queue.append(item)
 
+    # pop items from the front of the list: O(n)
     def dequeue(self):
         self._queue.pop(0)
 
@@ -24,10 +32,15 @@ class Queue(object):
         return not self._queue
 
 
-"""STACK
+"""STACKS
 
-- LIFO: last in first out. Push items onto the top; pop items off the top
-  push(item), pop(), peek(), is_empty()
+- Last in, first out (LIFO)
+- Push items onto the top; pop items off the top
+- Runtime:
+    - Add-R: O(n)
+    - Pop-R: O(n)
+- Common methods: push(item), pop(), peek(), is_empty()
+
 """
 
 class Stack(object):

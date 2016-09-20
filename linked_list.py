@@ -1,7 +1,15 @@
 """LINKED LIST
 
-- Group of nodes in a sequence; each node has a value (.data) & pointer (.next);
-  the linked list object has a head attribute
+- Stores an ordered list of objects as nodes in a sequence
+- Each node has value (.data) & pointer (.next) attributes
+- Runtime:
+    - Index: O(n)
+    - Search: O(n)
+    - Add-R: O(n), or O(1) with a tail attribute
+    - Add-L: O(1)
+    - Pop-R: O(n)
+    - Pop-L: O(1)
+
 """
 
 class Node(object):
@@ -121,7 +129,18 @@ class LinkedList(object):
 my_ll = LinkedList()
 
 
-"""DOUBLY LINKED LIST"""
+"""DOUBLY LINKED LIST
+
+- Each node also has a previous (.prev) attribute
+- Runtime:
+    - Index: O(n)
+    - Search: O(n)
+    - Add-R: O(1)
+    - Add-L: O(1)
+    - Pop-R: O(1)
+    - Pop-L: O(1)
+
+"""
 
 class Node(object):
     """Node in a doubly linked list."""
